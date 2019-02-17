@@ -5,8 +5,8 @@ const {
 module.exports = {
   Query: {
     launches: async (_, {
+      after,
       pageSize = 20,
-      after
     }, {
       dataSources
     }) => {
