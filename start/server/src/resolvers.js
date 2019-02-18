@@ -5,8 +5,8 @@ const {
 module.exports = {
   Query: {
     launches: async (_, {
-      after,
       pageSize = 20,
+      after
     }, {
       dataSources
     }) => {
@@ -57,6 +57,14 @@ module.exports = {
     }
   },
 
+  Mission: {
+    missionPatch: (mission, { size } = { size: 'LARGE' }) => {
+      return size === 'SMALL'
+        ? mission.missionPatchSmall
+        : mission.missionPatchLarge
+    }
+  },
+
   Mutation: {
     login: async (_, {
       email
@@ -66,7 +74,7 @@ module.exports = {
       const user = await dataSources.userAPI.findOrCreateUser({
         email
       })
-      if (user) return Buffer.from(email).toString('base64')
+      if (user) return new Buffer.from(email).toString('base64')
     },
 
     bookTrips: async (_, {

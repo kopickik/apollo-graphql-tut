@@ -20,7 +20,7 @@ fragment LaunchTile on Launch {
 `
 
 export const GET_LAUNCHES = gql`
-query listOfLaunches($after: String) {
+query GetLaunches($after: String) {
   launches(after: $after) {
     cursor
     hasMore

@@ -43,7 +43,7 @@ const Container = styled('footer')({
   bottom: 0,
 });
 
-const InnerContainer = styled('div')({
+export const InnerContainer = styled('div')({
   display: 'flex',
   alignItems: 'center',
   maxWidth: 460,
