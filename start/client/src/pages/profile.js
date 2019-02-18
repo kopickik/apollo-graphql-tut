@@ -28,14 +28,14 @@ export default function Profile() {
           <Fragment>
             <Header>My Trips</Header>
             {data.me
-            ? `Hello ${data.me.email}.` : 'yOU SHOULD LOGIN SIR.'
+            ? `Hello ${data.me.email}.` : 'Cannot detect a valid user.'
             }
             {data.me && data.me.trips.length ? (
               data.me.trips.map(launch => (
                 <LaunchTile key={launch.id} launch={launch} />
               ))
             ) : (
-              <p>You don't have any trips booked.</p>
+              <p>You have zero trips booked.</p>
             )}
           </Fragment>
         )
