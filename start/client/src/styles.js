@@ -48,5 +48,11 @@ export default () => injectGlobal({
     fontSize: 16,
     textTransform: 'uppercase',
     letterSpacing: 4,
+  },
+  [['a[aria-current="page"]', '[aria-current="page"] > svg']]: {
+    color: colors.textSecondary,
+    fill: colors.textSecondary,
+    fontWeight: 700,
+    transition: 'all 0.2s ease-in-out'
   }
 });

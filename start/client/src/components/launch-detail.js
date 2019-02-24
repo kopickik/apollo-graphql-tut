@@ -14,7 +14,6 @@ const LaunchDetail = ({ id, isInCart, rocket, mission }) => (
     <h3>
       {rocket.name} ({rocket.type})
     </h3>
-    <pre>{JSON.stringify(rocket)}</pre>
     <h6>in your cart? <strong>{JSON.stringify(isInCart)}</strong></h6>
     <InnerContainer>
       <Img src={mission.missionPatch} alt={mission.name} />

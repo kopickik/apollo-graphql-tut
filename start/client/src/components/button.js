@@ -1,5 +1,5 @@
 import styled from 'react-emotion';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 import { unit, colors } from '../styles';
 
@@ -23,6 +23,10 @@ export default styled('button')({
   outline: 'none',
   ':hover': {
     backgroundColor: lighten(0.1, colors.accent),
+  },
+  ':focus': {
+    backgroundColor: lighten(0.1, colors.accent),
+    'box-shadow': '0 0 3pt 2pt cadetblue'
   },
   ':active': {
     backgroundColor: lighten(0.2, colors.accent),

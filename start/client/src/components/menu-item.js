@@ -11,24 +11,24 @@ export const menuItemClassName = css({
   color: colors.secondary,
   textTransform: 'uppercase',
   textAlign: 'center',
-  transition: 'all 0.2s ease-in-out',
+  transition: 'all 0.1s ease-in-out',
   svg: {
     display: 'block',
     width: 60,
     margin: `0 auto ${unit}px`,
     fill: colors.secondary,
-    transition: 'fill 0.2s ease-in-out'
+    transition: 'fill 0.1s ease-in-out'
   },
   "svg:hover": {
     cursor: 'pointer',
     fill: colors.textSecondary,
-    transition: 'fill 0.2s ease-in-out'
+    transition: 'fill 0.1s ease-in-out'
   },
   "&:hover": {
     cursor: 'pointer',
     color: colors.textSecondary,
     fontWeight: 700,
-    transition: 'all 0.2s ease-in-out'
+    transition: 'all 0.1s ease-in-out'
   }
 });
 
