@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import { unit } from '../styles';
 import { cardClassName, getBackgroundImage } from './launch-tile';
 
-const LaunchDetail = ({ id, isInCart, rocket, mission }) => (
+const LaunchDetail = ({ id, isInCart, rocket, mission, isBooked }) => (
   <Card
     style={{
       backgroundImage: getBackgroundImage(id),
@@ -14,6 +14,7 @@ const LaunchDetail = ({ id, isInCart, rocket, mission }) => (
       {rocket.name} ({rocket.type})
     </h3>
     <h6>in your cart? <strong>{JSON.stringify(isInCart)}</strong></h6>
+    <h6>booked? <strong>{JSON.stringify(isBooked)}</strong></h6>
     <Flexarea>
       <Img src={mission.missionPatch} alt={mission.name} />
     </Flexarea>
