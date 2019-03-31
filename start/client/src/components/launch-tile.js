@@ -32,7 +32,7 @@ export default ({ launch }) => {
  */
 
 export const cardClassName = css({
-  padding: `${unit * 4}px ${unit * 5}px`,
+  padding: `1em`,
   borderRadius: 7,
   color: 'white',
   backgroundSize: 'cover',

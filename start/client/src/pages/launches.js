@@ -8,6 +8,7 @@ export const LAUNCH_TILE_DATA = gql`
 fragment LaunchTile on Launch {
   id
   isBooked
+  isInCart @client
   rocket {
     id
     name

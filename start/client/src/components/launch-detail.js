@@ -3,7 +3,6 @@ import styled from 'react-emotion';
 
 import { unit } from '../styles';
 import { cardClassName, getBackgroundImage } from './launch-tile';
-import { InnerContainer } from './footer'
 
 const LaunchDetail = ({ id, isInCart, rocket, mission }) => (
   <Card
@@ -15,9 +14,9 @@ const LaunchDetail = ({ id, isInCart, rocket, mission }) => (
       {rocket.name} ({rocket.type})
     </h3>
     <h6>in your cart? <strong>{JSON.stringify(isInCart)}</strong></h6>
-    <InnerContainer>
+    <Flexarea>
       <Img src={mission.missionPatch} alt={mission.name} />
-    </InnerContainer>
+    </Flexarea>
   </Card>
 );
 
@@ -31,9 +30,13 @@ const Card = styled('div')(cardClassName, {
 });
 
 const Img = styled('img')({
-  display: 'block',
   maxWidth: '6em',
-  margin: 'auto'
+  alignSelf: 'flex-end'
+})
 
+const Flexarea = styled('div')({
+  display: 'flex',
+  height: 275,
+  justifyContent: 'flex-end'
 })
 export default LaunchDetail;

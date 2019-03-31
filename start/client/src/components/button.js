@@ -1,5 +1,5 @@
 import styled from 'react-emotion';
-import { lighten, darken } from 'polished';
+import { lighten } from 'polished';
 
 import { unit, colors } from '../styles';
 

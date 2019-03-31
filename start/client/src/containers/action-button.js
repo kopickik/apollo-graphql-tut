@@ -19,7 +19,7 @@ mutation cancel($launchId: ID!) {
     message
     launches {
       id
-      isBooked
+      isBooked @client
     }
   }
 }
