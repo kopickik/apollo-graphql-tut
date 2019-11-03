@@ -1,3 +1,4 @@
+require('dotenv').config();
 const SQL = require('sequelize');
 
 module.exports.paginateResults = ({
@@ -34,7 +35,7 @@ module.exports.createStore = () => {
     $in: Op.in,
   };
 
-  const db = new SQL('database', 'username', 'password', {
+  const db = new SQL(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
     dialect: 'sqlite',
     storage: './store.sqlite',
     operatorsAliases,
